@@ -1,9 +1,9 @@
+# Thesis Scripting Utils
 This repository contains scripts used in preprocessing images for thesis and a user guide for people not comfortable with the terminal. 
-
-
-# Remote Access Guide for Thesis PC
 Note: most of the scripts are hardcoded. 
 
+
+## Remote Access Guide for Thesis PC
 I'm running this on Ubuntu 22 LTS. For windows peeps, they could download WSL instead and download the necessary packages.
 
 Moreover, you'll need a public IP. In my case, I just used zero tier to allow access.
@@ -62,8 +62,8 @@ jupyter notebook --no-browser --port=8899 --ip 0.0.0.0
 - Type `jupyter notebook list` on the terminal to get a list of running jupyter notebooks with their tokens
 
 
-# File Transfer Guide
-## Rsync Via Port 2222
+## File Transfer Guide
+#### Rsync Via Port 2222
 ```bash
 # Upload temp_test to eugene@<REDACTED_IP>:/home/eugene 
 rsync -rvz -e 'ssh -p 2222' temp_test  eugene@<REDACTED_IP>:/home/eugene
@@ -74,7 +74,7 @@ rsync -rvz -e 'ssh -p 2222' temp_test  eugene@<REDACTED_IP>:/home/eugene
 ```
 
 
-# Running Commands in the background
+## Running Commands in the background
 ``` bash
 # Squashes std output and allows a cli command to run in the background. Instead, it pipes both std out and std err to foo.log and foo.err respectively
 nohup myprogram > foo.log 2> foo.err < /dev/null &
